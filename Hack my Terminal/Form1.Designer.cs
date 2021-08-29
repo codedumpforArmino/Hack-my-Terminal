@@ -29,13 +29,103 @@ namespace Hack_my_Terminal
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ListBox_ValidWords = new System.Windows.Forms.ListBox();
+            this.TextBox_AddWord = new System.Windows.Forms.TextBox();
+            this.TextBox_CorrectLetters = new System.Windows.Forms.TextBox();
+            this.Button_Clear = new System.Windows.Forms.Button();
+            this.Label_CorrectLetters = new System.Windows.Forms.Label();
+            this.Label_Word = new System.Windows.Forms.Label();
+            this.Button_AddWord = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // ListBox_ValidWords
+            // 
+            this.ListBox_ValidWords.FormattingEnabled = true;
+            this.ListBox_ValidWords.Location = new System.Drawing.Point(167, 35);
+            this.ListBox_ValidWords.Name = "ListBox_ValidWords";
+            this.ListBox_ValidWords.Size = new System.Drawing.Size(145, 355);
+            this.ListBox_ValidWords.TabIndex = 0;
+            this.ListBox_ValidWords.DoubleClick += new System.EventHandler(this.ListBox_ValidWords_DoubleClick_1);
+            // 
+            // TextBox_AddWord
+            // 
+            this.TextBox_AddWord.Location = new System.Drawing.Point(27, 219);
+            this.TextBox_AddWord.Name = "TextBox_AddWord";
+            this.TextBox_AddWord.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_AddWord.TabIndex = 1;
+            // 
+            // TextBox_CorrectLetters
+            // 
+            this.TextBox_CorrectLetters.Location = new System.Drawing.Point(27, 306);
+            this.TextBox_CorrectLetters.Name = "TextBox_CorrectLetters";
+            this.TextBox_CorrectLetters.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_CorrectLetters.TabIndex = 2;
+            // 
+            // Button_Clear
+            // 
+            this.Button_Clear.Location = new System.Drawing.Point(202, 396);
+            this.Button_Clear.Name = "Button_Clear";
+            this.Button_Clear.Size = new System.Drawing.Size(75, 23);
+            this.Button_Clear.TabIndex = 3;
+            this.Button_Clear.Text = "Clear";
+            this.Button_Clear.UseVisualStyleBackColor = true;
+            // 
+            // Label_CorrectLetters
+            // 
+            this.Label_CorrectLetters.AutoSize = true;
+            this.Label_CorrectLetters.Location = new System.Drawing.Point(24, 290);
+            this.Label_CorrectLetters.Name = "Label_CorrectLetters";
+            this.Label_CorrectLetters.Size = new System.Drawing.Size(76, 13);
+            this.Label_CorrectLetters.TabIndex = 4;
+            this.Label_CorrectLetters.Text = "Correct Letters";
+            // 
+            // Label_Word
+            // 
+            this.Label_Word.AutoSize = true;
+            this.Label_Word.Location = new System.Drawing.Point(24, 203);
+            this.Label_Word.Name = "Label_Word";
+            this.Label_Word.Size = new System.Drawing.Size(33, 13);
+            this.Label_Word.TabIndex = 5;
+            this.Label_Word.Text = "Word";
+            // 
+            // Button_AddWord
+            // 
+            this.Button_AddWord.Location = new System.Drawing.Point(37, 245);
+            this.Button_AddWord.Name = "Button_AddWord";
+            this.Button_AddWord.Size = new System.Drawing.Size(75, 23);
+            this.Button_AddWord.TabIndex = 6;
+            this.Button_AddWord.Text = "Add word";
+            this.Button_AddWord.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Button_AddWord);
+            this.Controls.Add(this.Label_Word);
+            this.Controls.Add(this.Label_CorrectLetters);
+            this.Controls.Add(this.Button_Clear);
+            this.Controls.Add(this.TextBox_CorrectLetters);
+            this.Controls.Add(this.TextBox_AddWord);
+            this.Controls.Add(this.ListBox_ValidWords);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox ListBox_ValidWords;
+        private System.Windows.Forms.TextBox TextBox_AddWord;
+        private System.Windows.Forms.TextBox TextBox_CorrectLetters;
+        private System.Windows.Forms.Button Button_Clear;
+        private System.Windows.Forms.Label Label_CorrectLetters;
+        private System.Windows.Forms.Label Label_Word;
+        private System.Windows.Forms.Button Button_AddWord;
     }
 }
 
