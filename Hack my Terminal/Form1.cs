@@ -38,7 +38,6 @@ namespace Hack_my_Terminal
             }
         }
 
-        //missing error if textbox_correctletters is empty
         private void ListBox_ValidWords_DoubleClick_1(object sender, EventArgs e)
         {
             //implement error trapping if TextBox_correctletters is empty
