@@ -36,6 +36,7 @@ namespace Hack_my_Terminal
             this.Label_CorrectLetters = new System.Windows.Forms.Label();
             this.Label_Word = new System.Windows.Forms.Label();
             this.Button_AddWord = new System.Windows.Forms.Button();
+            this.Button_Reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListBox_ValidWords
@@ -49,14 +50,14 @@ namespace Hack_my_Terminal
             // 
             // TextBox_AddWord
             // 
-            this.TextBox_AddWord.Location = new System.Drawing.Point(27, 219);
+            this.TextBox_AddWord.Location = new System.Drawing.Point(31, 54);
             this.TextBox_AddWord.Name = "TextBox_AddWord";
             this.TextBox_AddWord.Size = new System.Drawing.Size(100, 20);
             this.TextBox_AddWord.TabIndex = 1;
             // 
             // TextBox_CorrectLetters
             // 
-            this.TextBox_CorrectLetters.Location = new System.Drawing.Point(27, 306);
+            this.TextBox_CorrectLetters.Location = new System.Drawing.Point(31, 141);
             this.TextBox_CorrectLetters.Name = "TextBox_CorrectLetters";
             this.TextBox_CorrectLetters.Size = new System.Drawing.Size(100, 20);
             this.TextBox_CorrectLetters.TabIndex = 2;
@@ -73,7 +74,7 @@ namespace Hack_my_Terminal
             // Label_CorrectLetters
             // 
             this.Label_CorrectLetters.AutoSize = true;
-            this.Label_CorrectLetters.Location = new System.Drawing.Point(24, 290);
+            this.Label_CorrectLetters.Location = new System.Drawing.Point(28, 125);
             this.Label_CorrectLetters.Name = "Label_CorrectLetters";
             this.Label_CorrectLetters.Size = new System.Drawing.Size(76, 13);
             this.Label_CorrectLetters.TabIndex = 4;
@@ -82,7 +83,7 @@ namespace Hack_my_Terminal
             // Label_Word
             // 
             this.Label_Word.AutoSize = true;
-            this.Label_Word.Location = new System.Drawing.Point(24, 203);
+            this.Label_Word.Location = new System.Drawing.Point(28, 38);
             this.Label_Word.Name = "Label_Word";
             this.Label_Word.Size = new System.Drawing.Size(33, 13);
             this.Label_Word.TabIndex = 5;
@@ -90,18 +91,29 @@ namespace Hack_my_Terminal
             // 
             // Button_AddWord
             // 
-            this.Button_AddWord.Location = new System.Drawing.Point(37, 245);
+            this.Button_AddWord.Location = new System.Drawing.Point(41, 80);
             this.Button_AddWord.Name = "Button_AddWord";
             this.Button_AddWord.Size = new System.Drawing.Size(75, 23);
             this.Button_AddWord.TabIndex = 6;
             this.Button_AddWord.Text = "Add word";
             this.Button_AddWord.UseVisualStyleBackColor = true;
+            this.Button_AddWord.Click += new System.EventHandler(this.Button_AddWord_Click);
+            // 
+            // Button_Reset
+            // 
+            this.Button_Reset.Location = new System.Drawing.Point(41, 396);
+            this.Button_Reset.Name = "Button_Reset";
+            this.Button_Reset.Size = new System.Drawing.Size(75, 23);
+            this.Button_Reset.TabIndex = 7;
+            this.Button_Reset.Text = "Reset";
+            this.Button_Reset.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(359, 450);
+            this.Controls.Add(this.Button_Reset);
             this.Controls.Add(this.Button_AddWord);
             this.Controls.Add(this.Label_Word);
             this.Controls.Add(this.Label_CorrectLetters);
@@ -126,6 +138,7 @@ namespace Hack_my_Terminal
         private System.Windows.Forms.Label Label_CorrectLetters;
         private System.Windows.Forms.Label Label_Word;
         private System.Windows.Forms.Button Button_AddWord;
+        private System.Windows.Forms.Button Button_Reset;
     }
 }
 
