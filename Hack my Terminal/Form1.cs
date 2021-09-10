@@ -20,18 +20,9 @@ namespace Hack_my_Terminal
         {
             InitializeComponent();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            //initialize hard coded variables
-            /*
-            System.Object[] ItemObject = new System.Object[17];
-            for (int i = 0; i < 17; i++)
-            {
-                ItemObject[i] = Valid_Words[i];
-            }
-            ListBox_ValidWords.Items.AddRange(ItemObject);
-            */
-
             for (int i = 0; i < Startup.WordAmount; i++)
             {
                 isValid[i] = true;
@@ -80,14 +71,20 @@ namespace Hack_my_Terminal
 
         private void Button_AddWord_Click(object sender, EventArgs e)
         {
-            Valid_Words[WordCount] = Convert.ToString(TextBox_AddWord.Text);
-            if (Valid_Words[WordCount].Length == Startup.StringLenght) //trapping error if string lenght is less than number of needed letters
+            if (WordCount == Startup.WordAmount) //trap error: if user adds more words than expected
             {
-                ListBox_ValidWords.Items.Add(TextBox_AddWord.Text);
-                WordCount++;
+                Valid_Words[WordCount] = Convert.ToString(TextBox_AddWord.Text);
+                if (Valid_Words[WordCount].Length == Startup.StringLenght) //trapping error if string lenght is less than number of needed letters
+                {
+                    ListBox_ValidWords.Items.Add(TextBox_AddWord.Text);
+                    WordCount++;
+                }
+                else
+                    MessageBox.Show("Your words does not match the number of letters it has.");
             }
             else
-                MessageBox.Show("Your words does not match the number of letters it has.");
+                MessageBox.Show("Maximum amount of words reached.");
+            
         }
 
         private void Button_Reset_Click(object sender, EventArgs e)
