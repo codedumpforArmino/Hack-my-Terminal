@@ -66,16 +66,16 @@ namespace Hack_my_Terminal
                                 isValid[x] = false;
                                 RemovedWords++;
                             }
-                            else
-                                MessageBox.Show("Correct word was guessed");
+                            
                         }
                     }
                 }
                 else
                     MessageBox.Show("The number of words in the list does not match the Number of words in the terminal.");
-
             }
-            
+            else
+                MessageBox.Show("Correct word was guessed");
+
         }
 
         private void Button_AddWord_Click(object sender, EventArgs e)
@@ -88,6 +88,33 @@ namespace Hack_my_Terminal
             }
             else
                 MessageBox.Show("Your words does not match the number of letters it has.");
+        }
+
+        private void Button_Reset_Click(object sender, EventArgs e)
+        {
+            Startup S1 = new Startup();
+            this.Hide();
+            S1.ShowDialog();
+            this.Close();
+        }
+
+        private void Button_Clear_Click(object sender, EventArgs e)
+        {
+            string SortTemp;
+
+            ListBox_ValidWords.Items.RemoveAt(ListBox_ValidWords.SelectedIndex);
+            WordCount--;
+
+            if (WordCount == 0)
+                MessageBox.Show("Please input some words first.");
+            else if (WordCount > 1)
+            {
+                //swap array to last array so last array gets replaced by latest input
+                SortTemp = Valid_Words[WordCount];
+                Valid_Words[WordCount] = Valid_Words[ListBox_ValidWords.SelectedIndex];
+                Valid_Words[ListBox_ValidWords.SelectedIndex] = SortTemp;
+            }
+            
         }
     }
 }

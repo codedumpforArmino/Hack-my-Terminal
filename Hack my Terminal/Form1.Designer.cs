@@ -70,6 +70,7 @@ namespace Hack_my_Terminal
             this.Button_Clear.TabIndex = 3;
             this.Button_Clear.Text = "Clear";
             this.Button_Clear.UseVisualStyleBackColor = true;
+            this.Button_Clear.Click += new System.EventHandler(this.Button_Clear_Click);
             // 
             // Label_CorrectLetters
             // 
@@ -107,6 +108,7 @@ namespace Hack_my_Terminal
             this.Button_Reset.TabIndex = 7;
             this.Button_Reset.Text = "Reset";
             this.Button_Reset.UseVisualStyleBackColor = true;
+            this.Button_Reset.Click += new System.EventHandler(this.Button_Reset_Click);
             // 
             // Form1
             // 
